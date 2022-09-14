@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+ </head>
+ <body>
+    <h1>Bitcoin Конвертер</h1>
+    <p>
+        <label>Bitcoin price USD:</label>
+        <input type="numder" placeholder="21000">
+        
+    </p>    
+
+        <label>How much $ do you have?</label>
+        <input id="inputdol" type="number" placeholder="$"
+        oninput="CoinConverter(this.value)" 
+        onchange="CoinConverter(this.value)">
+ 
+    <p>
+        You can buy BTS:<span id="outputBitcoin"></span>
+         
+    </p>
+    <script>
+        function CoinConverter(valNum) {   
+        document.getElementById("outputBitcoin").innerHTML = valNum/21000;          
+    }
+        </script>  
+ </body>
+</html>
